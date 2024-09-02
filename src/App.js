@@ -1,5 +1,5 @@
-import "./categories.styles.scss";
-import CategoryItem from "./components/category-item/category-item.component.jsx";
+import Directory from "./components/directory/directory.component";
+import "./components/directory/directory.styles.scss";
 function App() {
   const categories = [
     {
@@ -28,14 +28,9 @@ function App() {
       imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
     },
   ];
-
   return (
     <>
-      <div className="categories-container">
-        {categories.map((category) => (
-          <CategoryItem category={category} key={category.id} />
-        ))}
-      </div>
+      <Directory categories={categories} />
     </>
   );
 }
